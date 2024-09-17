@@ -14,18 +14,22 @@
 
 		default_layer {
 			// -----------------------------------------------------------------------------------------
-			// |  ESC |  F1 |  F2 |  F3 |  F4 |  F5 |      |      |    |     |  F6  |  F7 |  F8 |  F9 | F10  |      |
-			// |  ~   |  1  |  2  |  3  |  4  |  5  |      |      |  - |  -  |  6   |  7  |  8  |  9  |  0   | +    |
-			// | TAB  |  Q  |  W  |  E  |  R  |  T  | PgUp |      |    |  {  |  Y   |  U  |  I  |  O  |  P   | \    |
-			// | CAP  |  A  |  S  |  D  |  F  |  G  | PgDn |      |    |  }  |  H   |  J  |  K  |  L  |  ;   | '    |
-			// | SHFT |  Z  |  X  |  C  |  V  |  B  |      |      |    |     |  N   |  M  |  ,  |  .  |  /   | PgUP |
-			// | L2 |  \  |  <- |  v  | BKSP| SHFT| ALT  | L1   |    |     |  M   |  ,  |  .  |  /  | ESC  | PgDn |
-			//								      | CTRL | META |    |    | ENT | RSE  | ALT |
+			// |  ESC |  F1 |  F2 |  F3 |  F4 |  F5 | VOLUP |      |    | MUTE |  F6  |  F7 |  F8 |  F9 | F10  | PSCRN |
+			// |  ~   |  1  |  2  |  3  |  4  |  5  | VOLDN |      |    |  -   |  6   |  7  |  8  |  9  |  0   | +     |
+			// | TAB  |  Q  |  W  |  E  |  R  |  T  | PgUp  |      |    |  {   |  Y   |  U  |  I  |  O  |  P   | \     |
+			// | CAP  |  A  |  S  |  D  |  F  |  G  | PgDn  |      |    |  }   |  H   |  J  |  K  |  L  |  ;   | '     |
+			// | SHFT |  Z  |  X  |  C  |  V  |  B  |       |      |    |      |  N   |  M  |  ,  |  .  |  /   | HOME  |
+			// | L2   |  \  |  <- |  v  | BKSP| SHFT| ALT   | L1   |    |     |  M   |  ,  |  .  |  /  | ESC  | END |
+			//                                      | CTRL  | META |    |    | ENT | RSE  | ALT |
 			bindings = <
-				&kp ESC   &kp F1 &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-				&kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-				&kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-				&kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+				&kp ESC   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp C_VOL_UP                    &kp C_MUTE   &kp F6   &kp F7     &kp F8    &kp F9     &kp F10  &kp PSCRN 
+				M&kp ~    &kp 1    &kp 2    &kp 3    &kp 4    &kp 5    &kp C_VOL_DN                    &kp MINUS    &kp 6    &kp 7      &kp 8     &kp 9      &kp 0    &kp PLUS 
+				&kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T    &kp PG_UP       	               &kp LBKT     &kp Y    &kp U      &kp I     &kp O      &kp P    &kp BSLH 
+				&kp CLCK  &kp A    &kp S    &kp D    &kp F    &kp G    &kp PG_DN                       &kp RBKT     &kp H    &kp J      &kp K     &kp L      &kp SEMI &kp SQT
+				&kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B                                                 &kp N    &kp M      &kp COMMA &kp DOT    &kp FSLH &kp HOME 
+
+				&mo 2     &kp BSLH &kp LEFT &kp DOWN &kp BSPC &kp SHFT &kp ALT      &mo 1   &kp ENTER  &kp ALT      &kp SHFT &kp SPACE  &kp UP    &kp RIGHT  &kp ESC  &kp END
+				                                                       &kp CTRL     &LMETA  &kp RMETA  &kp CTRL
 				>;
 		};
 		lower_layer {
