@@ -11,6 +11,6 @@
         remote: petejohanson
         revision: feat/pointers-with-input-processors
         import: app/west.yml
-        self:
-          path: config
-          https://github.com/petejohanson/zmk/tree/
+    self:
+      path: config
+      https://github.com/petejohanson/zmk/tree/
