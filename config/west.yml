@@ -13,4 +13,3 @@
         import: app/west.yml
     self:
       path: config
-      https://github.com/petejohanson/zmk/tree/
