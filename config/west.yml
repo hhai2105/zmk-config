@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
+    - name: pete
+      url-base: https://github.com/petejohanson/zmk
   projects:
     - name: zmk
-      remote: urob
-      revision: main-with-native-mouse
+      remote: pete
+      revision: feat/pointers-move-scroll
       import: app/west.yml
   self:
     path: config
