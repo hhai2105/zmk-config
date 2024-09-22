@@ -1,2 +1,3 @@
 #include "dactyl.dtsi"
+#include "mouse.dtsi"
 
