@@ -23,13 +23,13 @@
             //                                      | CTRL  | META |    |    | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC     &kp F1    &kp F2        &kp F3  &kp F4  &kp F5     &kp C_VOL_UP              &kp C_MUTE  &kp F6     &kp F7     &kp F8        &kp F9  &kp F10  &kp PSCRN
-&kp GRAVE   &kp N1    &kp N2        &kp N3  &kp N4  &kp N5     &kp C_VOL_DN                                     &kp MINUS  &kp N6        &kp N7  &kp N8   &kp N9         &kp N0     &kp EQUAL
-&kp TAB     &kp Q     &kp W         &kp E   &kp R   &kp T      &kp PG_UP                                        &kp LBKT   &kp Y         &kp U   &kp I    &kp O          &kp P      &kp BSLH
-&kp ESCAPE  &kp A     &kp S         &kp D   &kp F   &kp G      &kp PG_DN                                        &kp RBKT   &kp H         &kp J   &kp K    &kp L          &kp SEMI   &kp SQT
-&kp LSHFT   &kp Z     &kp X         &kp C   &kp V   &kp B                                                                                &kp N   &kp M    &kp COMMA      &kp DOT    &kp FSLH   &kp RIGHT_SHIFT
-&kp LCTRL   &kp LCMD  &kp LEFT_ALT  &mo 5   &mo 3   &kp SPACE  &mo 2         &kp LCTRL               &kp RCTRL  &mo 1      &kp ENTER     &mo 4   &mo 5    &kp RIGHT_ALT  &kp RMETA  &kp RCTRL
-                                                               &kp CAPSLOCK  &kp LSHIFT                         &kp RGUI   &kp CAPSLOCK
+&kp ESC     &kp F1    &kp F2        &kp F3  &kp F4  &kp F5     &kp C_VOL_UP              &kp C_MUTE  &kp F6     &kp F7            &kp F8        &kp F9  &kp F10  &kp PSCRN
+&kp GRAVE   &kp N1    &kp N2        &kp N3  &kp N4  &kp N5     &kp C_VOL_DN                                     &kp K_PLAY_PAUSE  &kp N6        &kp N7  &kp N8   &kp N9         &kp N0     &kp BACKSPACE
+&kp TAB     &kp Q     &kp W         &kp E   &kp R   &kp T      &kp PG_UP                                        &kp EQUAL         &kp Y         &kp U   &kp I    &kp O          &kp P      &kp BSLH
+&kp ESCAPE  &kp A     &kp S         &kp D   &kp F   &kp G      &kp PG_DN                                        &kp MINUS         &kp H         &kp J   &kp K    &kp L          &kp SEMI   &kp SQT
+&kp LSHFT   &kp Z     &kp X         &kp C   &kp V   &kp B                                                                                       &kp N   &kp M    &kp COMMA      &kp DOT    &kp FSLH       &kp RIGHT_SHIFT
+&kp LCTRL   &kp LCMD  &kp LEFT_ALT  &mo 5   &mo 3   &kp SPACE  &mo 2         &kp LCTRL               &kp RCTRL  &mo 1             &kp ENTER     &mo 4   &mo 5    &kp RIGHT_ALT  &kp RMETA  &kp RCTRL
+                                                               &kp CAPSLOCK  &kp LSHIFT                         &kp RGUI          &kp CAPSLOCK
             >;
         };
 
