@@ -99,7 +99,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans                &trans              &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans                &trans              &trans             &trans               &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans                &trans              &trans             &msc SCROLL_VERT 20  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_HOR -500  &mmv MOVE_VERT -500   &mmv MOVE_VERT 500  &mmv MOVE_HOR 500  &trans               &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_HOR -100  &mmv MOVE_VERT -600   &mmv MOVE_VERT 500  &mmv MOVE_HOR 500  &trans               &trans
 &trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_VERT -20  &trans              &trans             &trans               &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans                &trans              &trans             &trans               &trans
                                                       &trans  &trans                  &trans  &trans
