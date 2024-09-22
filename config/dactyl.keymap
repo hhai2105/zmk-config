@@ -96,12 +96,12 @@
 
         mousedefault {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans          &trans            &trans        &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans          &trans            &trans        &trans           &trans          &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans          &trans            &trans        &trans           &msc SCROLL_UP  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans          &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                          &msc SCROLL_DOWN  &trans        &trans           &trans          &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans          &trans            &trans        &trans           &trans          &trans
                                                       &trans  &trans                  &trans  &trans
             >;
         };
