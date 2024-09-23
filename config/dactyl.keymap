@@ -22,12 +22,10 @@
 #define MOVE_DOWN_MAX MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define MOVE_LEFT_MAX MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT_MAX MOVE_HOR(U_MOUSE_MOVE_MAX)
-
 #define MOVE_UP_MED MOVE_VERT(-U_MOUSE_MOVE_MED)
 #define MOVE_DOWN_MED MOVE_VERT(U_MOUSE_MOVE_MED)
 #define MOVE_LEFT_MED MOVE_HOR(-U_MOUSE_MOVE_MED)
 #define MOVE_RIGHT_MED MOVE_HOR(U_MOUSE_MOVE_MED)
-
 #define MOVE_UP_MIN MOVE_VERT(-U_MOUSE_MOVE_MIN)
 #define MOVE_DOWN_MIN MOVE_VERT(U_MOUSE_MOVE_MIN)
 #define MOVE_LEFT_MIN MOVE_HOR(-U_MOUSE_MOVE_MIN)
@@ -140,38 +138,37 @@
 
         mousedefault {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans          &trans          &trans        &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans          &trans          &trans        &trans           &trans        &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans          &trans          &trans        &trans           &msc MOVE_UP  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans        &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                          &msc SCROLL_UP  &trans        &trans           &trans        &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans          &trans          &trans        &trans           &trans        &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans          &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_UP  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans          &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN    &trans            &trans               &trans          &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans          &trans
                                                       &trans  &trans                  &trans  &trans
             >;
         };
 
         mouseslow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MIN  &mmv MOVE_DOWN_MIN  &mmv MOVE_UP_MIN  &mmv MOVE_RIGHT_MIN  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MIN  &mmv MOVE_DOWN_MIN  &mmv MOVE_UP_MIN  &mmv MOVE_RIGHT_MIN  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &trans              &trans            &trans               &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
+                                                      &trans  &trans                  &trans  &trans
             >;
         };
 
         mousefast {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MAX  &mmv MOVE_DOWN_MAX  &mmv MOVE_UP_MAX  &mmv MOVE_RIGHT_MAX  &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MAX  &mmv MOVE_DOWN_MAX  &mmv MOVE_UP_MAX  &mmv MOVE_RIGHT_MAX  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &trans              &trans            &trans               &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
+                                                      &trans  &trans                  &trans  &trans
             >;
         };
     };
