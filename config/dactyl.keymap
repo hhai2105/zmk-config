@@ -35,7 +35,7 @@
     time-to-max-speed-ms = <50>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
-#define U_MOUSE_SCROLL_MAX 20                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX 10                    /* <--- New max speed setting (default: 10) */
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
