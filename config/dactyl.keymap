@@ -139,11 +139,11 @@
         mousedefault {
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans          &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_UP  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans          &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN    &trans            &trans               &trans          &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans          &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP      &trans            &trans               &trans            &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans            &trans
                                                       &trans  &trans                  &trans  &trans
             >;
         };
