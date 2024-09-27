@@ -55,29 +55,61 @@
 
 
 / {
-    normal_mkb {
+    normal_mmv {
 	    compatible = "zmk,input-behavior-listener";
 	    device = <&mmv>;
 	    layers = <6>;
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_X>;
 	    y-input-code = <INPUT_REL_Y>;
-	    scale-multiplier = <1>;
-	    scale-divisor = <2>;
+	    scale-multiplier = <4>;
+	    scale-divisor = <3>;
     };
-    fast_mkb {
+    fast_mmv {
 	    compatible = "zmk,input-behavior-listener";
 	    device = <&mmv>;
 	    layers = <8>;
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_X>;
 	    y-input-code = <INPUT_REL_Y>;
+	    scale-multiplier = <2>;
+	    scale-divisor = <1>;
+    };
+    fine_mmv {
+	    compatible = "zmk,input-behavior-listener";
+	    device = <&mmv>;
+	    layers = <7>;
+	    evt-type = <INPUT_EV_REL>;
+	    x-input-code = <INPUT_REL_X>;
+	    y-input-code = <INPUT_REL_Y>;
+	    scale-multiplier = <1>;
+	    scale-divisor = <4>;
+    };
+
+    normal_msc {
+	    compatible = "zmk,input-behavior-listener";
+	    device = <&msc>;
+	    layers = <6>;
+	    evt-type = <INPUT_EV_REL>;
+	    x-input-code = <INPUT_REL_X>;
+	    y-input-code = <INPUT_REL_Y>;
 	    scale-multiplier = <4>;
 	    scale-divisor = <3>;
     };
-    fine_mkb {
+
+    fast_msc {
 	    compatible = "zmk,input-behavior-listener";
-	    device = <&mmv>;
+	    device = <&msc>;
+	    layers = <8>;
+	    evt-type = <INPUT_EV_REL>;
+	    x-input-code = <INPUT_REL_X>;
+	    y-input-code = <INPUT_REL_Y>;
+	    scale-multiplier = <2>;
+	    scale-divisor = <1>;
+    };
+    fine_msc {
+	    compatible = "zmk,input-behavior-listener";
+	    device = <&msc>;
 	    layers = <7>;
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_X>;
