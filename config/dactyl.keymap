@@ -62,20 +62,16 @@
 };
 
 &mmv_input_listener {
-	input-processors = <&input_proc_temp_layer 6  600>;
-	scale-multiplier = <1>;
-	scale-divisor = <1>;
+	input-processors = <&xy_scaler 1 1>, <&input_proc_temp_layer 6  600>;
 
 	fine {
 		layers = <7>;
-		scale-multiplier = <5>;
-		scale-divisor = <3>;
+		input-processors = <&xy_scaler 3 2>;
 	};
 
 	fast {
 		layers = <8>;
-		scale-multiplier = <1>;
-		scale-divisor = <3>;
+		input-processors = <&xy_scaler 1 3>;
 	};
 };
 
