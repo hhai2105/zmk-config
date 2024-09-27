@@ -62,7 +62,6 @@
 };
 
 &mmv_input_listener {
-	input-processors = <&input_proc_temp_layer 6  600>;
 	scale-multiplier = <1>;
 	scale-divisor = <1>;
 
