@@ -61,20 +61,21 @@
     trigger-period-ms = <8>;      // 16
 };
 
-        tb0_mmv_ibl {
-                compatible = "zmk,input-behavior-listener";
-                device = <&mmv>;
-                layers = <8>;
-                evt-type = <INPUT_EV_REL>;
-                x-input-code = <INPUT_REL_X>;
-                y-input-code = <INPUT_REL_Y>;
-                scale-multiplier = <3>;
-                scale-divisor = <1>;
-        };
       
 
 
 / {
+
+    mmv_ibl {
+	    compatible = "zmk,input-behavior-listener";
+	    device = <&mmv>;
+	    layers = <8>;
+	    evt-type = <INPUT_EV_REL>;
+	    x-input-code = <INPUT_REL_X>;
+	    y-input-code = <INPUT_REL_Y>;
+	    scale-multiplier = <3>;
+	    scale-divisor = <1>;
+    };
     keymap {
         compatible = "zmk,keymap";
 
