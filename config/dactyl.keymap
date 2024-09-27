@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <behaviors/mouse_keys.dtsi>
 
 #define U_MOUSE_MOVE_MED 600
@@ -32,9 +31,6 @@
 #define MOVE_LEFT_MIN MOVE_X(-U_MOUSE_MOVE_MIN)
 #define MOVE_RIGHT_MIN MOVE_X(U_MOUSE_MOVE_MIN)
 
-&mmv {
-    time-to-max-speed-ms = <50>;             /* <--- How long time until max speed is reached (default: 500) */
-};
 
 #define U_MOUSE_SCROLL_MAX 20
 #define U_MOUSE_SCROLL_MED 14
@@ -52,8 +48,19 @@
 #define SCROLL_UP_MIN SCROLL_Y(-U_MOUSE_SCROLL_MIN)
 #define SCROLL_DOWN_MIN SCROLL_Y(U_MOUSE_SCROLL_MIN)
 
+&mmv {
+    acceleration-exponent = <1>;  // 1
+    time-to-max-speed-ms = <0>; // 300
+    delay-ms = <0>;
+    trigger-period-ms = <8>;      // 16
+};
+
+
 &msc {
-    time-to-max-speed-ms = <10>;                 /* <--- How long time until max speed is reached */
+    acceleration-exponent = <1>;  // 0
+    time-to-max-speed-ms = <0>;  // 300
+    delay-ms = <0>;
+    trigger-period-ms = <8>;      // 16
 };
 
 / {
