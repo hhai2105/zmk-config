@@ -18,18 +18,18 @@
 #undef MOVE_LEFT
 #undef MOVE_RIGHT
 
-#define MOVE_UP_MAX MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN_MAX MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT_MAX MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT_MAX MOVE_HOR(U_MOUSE_MOVE_MAX)
-#define MOVE_UP_MED MOVE_VERT(-U_MOUSE_MOVE_MED)
-#define MOVE_DOWN_MED MOVE_VERT(U_MOUSE_MOVE_MED)
-#define MOVE_LEFT_MED MOVE_HOR(-U_MOUSE_MOVE_MED)
-#define MOVE_RIGHT_MED MOVE_HOR(U_MOUSE_MOVE_MED)
-#define MOVE_UP_MIN MOVE_VERT(-U_MOUSE_MOVE_MIN)
-#define MOVE_DOWN_MIN MOVE_VERT(U_MOUSE_MOVE_MIN)
-#define MOVE_LEFT_MIN MOVE_HOR(-U_MOUSE_MOVE_MIN)
-#define MOVE_RIGHT_MIN MOVE_HOR(U_MOUSE_MOVE_MIN)
+#define MOVE_UP_MAX MOVE_Y(-U_MOUSE_MOVE_MAX)
+#define MOVE_DOWN_MAX MOVE_Y(U_MOUSE_MOVE_MAX)
+#define MOVE_LEFT_MAX MOVE_X(-U_MOUSE_MOVE_MAX)
+#define MOVE_RIGHT_MAX MOVE_X(U_MOUSE_MOVE_MAX)
+#define MOVE_UP_MED MOVE_Y(-U_MOUSE_MOVE_MED)
+#define MOVE_DOWN_MED MOVE_Y(U_MOUSE_MOVE_MED)
+#define MOVE_LEFT_MED MOVE_X(-U_MOUSE_MOVE_MED)
+#define MOVE_RIGHT_MED MOVE_X(U_MOUSE_MOVE_MED)
+#define MOVE_UP_MIN MOVE_Y(-U_MOUSE_MOVE_MIN)
+#define MOVE_DOWN_MIN MOVE_Y(U_MOUSE_MOVE_MIN)
+#define MOVE_LEFT_MIN MOVE_X(-U_MOUSE_MOVE_MIN)
+#define MOVE_RIGHT_MIN MOVE_X(U_MOUSE_MOVE_MIN)
 
 &mmv {
     time-to-max-speed-ms = <50>;             /* <--- How long time until max speed is reached (default: 500) */
@@ -44,12 +44,12 @@
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
-#define SCROLL_UP_MAX SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN_MAX SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_UP_MED SCROLL_VERT(-U_MOUSE_SCROLL_MED)
-#define SCROLL_DOWN_MED SCROLL_VERT(U_MOUSE_SCROLL_MED)
-#define SCROLL_UP_MIN SCROLL_VERT(-U_MOUSE_SCROLL_MIN)
-#define SCROLL_DOWN_MIN SCROLL_VERT(U_MOUSE_SCROLL_MIN)
+#define SCROLL_UP_MAX SCROLL_Y(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN_MAX SCROLL_Y(U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP_MED SCROLL_Y(-U_MOUSE_SCROLL_MED)
+#define SCROLL_DOWN_MED SCROLL_Y(U_MOUSE_SCROLL_MED)
+#define SCROLL_UP_MIN SCROLL_Y(-U_MOUSE_SCROLL_MIN)
+#define SCROLL_DOWN_MIN SCROLL_Y(U_MOUSE_SCROLL_MIN)
 
 &msc {
     time-to-max-speed-ms = <10>;                 /* <--- How long time until max speed is reached */
@@ -155,7 +155,6 @@
         mouseslow {
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MIN  &trans
 &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MIN  &mmv MOVE_DOWN_MIN  &mmv MOVE_UP_MIN  &mmv MOVE_RIGHT_MIN  &trans  &trans
