@@ -35,20 +35,24 @@
     time-to-max-speed-ms = <50>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
-#define U_MOUSE_SCROLL_MAX 10                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX 20
+#define U_MOUSE_SCROLL_MED 14
+#define U_MOUSE_SCROLL_MIN 5
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
-#define SCROLL_UP SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP_MAX SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN_MAX SCROLL_VERT(U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP_MED SCROLL_VERT(-U_MOUSE_SCROLL_MED)
+#define SCROLL_DOWN_MED SCROLL_VERT(U_MOUSE_SCROLL_MED)
+#define SCROLL_UP_MIN SCROLL_VERT(-U_MOUSE_SCROLL_MIN)
+#define SCROLL_DOWN_MIN SCROLL_VERT(U_MOUSE_SCROLL_MIN)
 
-&mwh {
-    time-to-max-speed-ms = <40>;                 /* <--- How long time until max speed is reached */
+&msc {
+    time-to-max-speed-ms = <10>;                 /* <--- How long time until max speed is reached */
 };
 
 / {
@@ -140,9 +144,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans            &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MED  &trans
 &mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans            &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP      &trans            &trans               &trans            &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MED      &trans            &trans               &trans            &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans            &trans
                                                       &trans  &trans                  &trans  &trans
             >;
@@ -153,8 +157,9 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MIN  &trans
 &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MIN  &mmv MOVE_DOWN_MIN  &mmv MOVE_UP_MIN  &mmv MOVE_RIGHT_MIN  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &trans              &trans            &trans               &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MIN      &trans            &trans               &trans            &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
                                                       &trans  &trans                  &trans  &trans
             >;
@@ -164,9 +169,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
-&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MAX  &mmv MOVE_DOWN_MAX  &mmv MOVE_UP_MAX  &mmv MOVE_RIGHT_MAX  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &trans              &trans            &trans               &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MAX  &trans
+&trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MAX  &mmv MOVE_DOWN_MAX  &mmv MOVE_UP_MAX  &mmv MOVE_RIGHT_MAX  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MAX      &trans            &trans               &trans            &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
                                                       &trans  &trans                  &trans  &trans
             >;
