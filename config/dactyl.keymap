@@ -62,22 +62,9 @@
 };
 
 &mmv_input_listener {
-	scale-multiplier = <1>;
-	scale-divisor = <1>;
-
-	fine {
-		layers = <7>;
-		scale-multiplier = <5>;
-		scale-divisor = <3>;
-	};
-
-	fast {
-		layers = <8>;
-		scale-multiplier = <1>;
-		scale-divisor = <3>;
-	};
+    scale-multiplier = <5>;
+    scale-divisor = <3>;
 };
-
 
 / {
     keymap {
