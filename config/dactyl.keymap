@@ -64,6 +64,21 @@
     trigger-period-ms = <8>;      // 16
 };
 
+&mmv_input_listener {
+	input-processors = <&xy_scaler 1 1>, <&input_proc_temp_layer 6  600>;
+
+	fine {
+		layers = <7>;
+		input-processors = <&xy_scaler 3 2>;
+	};
+
+	fast {
+		layers = <8>;
+		input-processors = <&xy_scaler 1 3>;
+	};
+};
+
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -117,9 +132,9 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans         &trans     &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &trans     &trans        &trans            &trans             &kp MINUS
-&trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans                          &trans  &trans         &kp EQUAL  &kp MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans                          &trans  &kp LEFT       &kp DOWN   &kp UP_ARROW  &kp RIGHT         &trans             &trans
-&trans  &trans  &kp N1  &kp N2  &kp N3  &trans                                                         &trans     &trans        &trans            &trans             &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &kp EQUAL  &kp MINUS     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp LEFT       &kp DOWN   &kp UP_ARROW  &kp RIGHT         &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                         &trans     &trans        &trans            &trans             &trans     &trans
 &trans  &trans  &kp N0  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &kp BACKSPACE  &trans     &trans        &trans            &trans             &trans
                                                 &trans  &trans                  &trans  &trans
             >;
@@ -165,9 +180,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MIN  &trans
-&trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MIN  &mmv MOVE_DOWN_MIN  &mmv MOVE_UP_MIN  &mmv MOVE_RIGHT_MIN  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MIN      &trans            &trans               &trans            &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MED  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MED      &trans            &trans               &trans            &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
                                                       &trans  &trans                  &trans  &trans
             >;
@@ -177,9 +192,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MAX  &trans
-&trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MAX  &mmv MOVE_DOWN_MAX  &mmv MOVE_UP_MAX  &mmv MOVE_RIGHT_MAX  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MAX      &trans            &trans               &trans            &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MED  &trans
+&mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MED      &trans            &trans               &trans            &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans  &trans
                                                       &trans  &trans                  &trans  &trans
             >;
