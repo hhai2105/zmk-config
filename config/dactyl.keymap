@@ -109,9 +109,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 8>;
-	    scale-multiplier = <2>;
-	    scale-divisor = <1>;
+	    bindings = <&ib_wheel_scaler 1 2>;
     };
     fine_msc {
 	    compatible = "zmk,input-behavior-listener";
@@ -120,7 +118,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 8>;
+	    bindings = <&ib_wheel_scaler 1 16>;
     };
     keymap {
         compatible = "zmk,keymap";
