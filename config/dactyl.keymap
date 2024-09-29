@@ -93,7 +93,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    scale-multiplier = <1>;
-	    scale-divisor = <4>;
+	    scale-divisor = <1>;
     };
 
     fast_msc {
@@ -103,7 +103,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    scale-multiplier = <1>;
+	    scale-multiplier = <2>;
 	    scale-divisor = <1>;
     };
     fine_msc {
@@ -114,7 +114,7 @@
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
 	    scale-multiplier = <1>;
-	    scale-divisor = <8>;
+	    scale-divisor = <2>;
     };
     keymap {
         compatible = "zmk,keymap";
