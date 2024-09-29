@@ -91,10 +91,9 @@
 	    device = <&msc>;
 	    layers = <6>;
 	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_X>;
-	    y-input-code = <INPUT_REL_Y>;
-	    scale-multiplier = <4>;
-	    scale-divisor = <3>;
+	    x-input-code = <INPUT_REL_MISC>;
+	    y-input-code = <INPUT_REL_WHEEL>;
+	    bindings = <&ib_wheel_scaler 1 4>
     };
 
     fast_msc {
@@ -102,20 +101,18 @@
 	    device = <&msc>;
 	    layers = <8>;
 	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_X>;
-	    y-input-code = <INPUT_REL_Y>;
-	    scale-multiplier = <2>;
-	    scale-divisor = <1>;
+	    x-input-code = <INPUT_REL_MISC>;
+	    y-input-code = <INPUT_REL_WHEEL>;
+	    bindings = <&ib_wheel_scaler 1 1>
     };
     fine_msc {
 	    compatible = "zmk,input-behavior-listener";
 	    device = <&msc>;
 	    layers = <7>;
 	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_X>;
-	    y-input-code = <INPUT_REL_Y>;
-	    scale-multiplier = <1>;
-	    scale-divisor = <4>;
+	    x-input-code = <INPUT_REL_MISC>;
+	    y-input-code = <INPUT_REL_WHEEL>;
+	    bindings = <&ib_wheel_scaler 1 8>
     };
     keymap {
         compatible = "zmk,keymap";
