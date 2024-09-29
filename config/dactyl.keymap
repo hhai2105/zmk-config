@@ -30,12 +30,12 @@
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
-#define SCROLL_UP_MAX MOVE_Y(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN_MAX MOVE_Y(U_MOUSE_SCROLL_MAX)
-#define SCROLL_UP_MED MOVE_Y(-U_MOUSE_SCROLL_MED)
-#define SCROLL_DOWN_MED MOVE_Y(U_MOUSE_SCROLL_MED)
-#define SCROLL_UP_MIN MOVE_Y(-U_MOUSE_SCROLL_MIN)
-#define SCROLL_DOWN_MIN MOVE_Y(U_MOUSE_SCROLL_MIN)
+#define SCROLL_UP_MAX MOVE_Y(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN_MAX MOVE_Y(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP_MED MOVE_Y(U_MOUSE_SCROLL_MED)
+#define SCROLL_DOWN_MED MOVE_Y(-U_MOUSE_SCROLL_MED)
+#define SCROLL_UP_MIN MOVE_Y(U_MOUSE_SCROLL_MIN)
+#define SCROLL_DOWN_MIN MOVE_Y(-U_MOUSE_SCROLL_MIN)
 
 &mmv {
     acceleration-exponent = <1>;  // 1
@@ -55,12 +55,6 @@
 
 
 / {
-    ib_wheel_scaler: ib_wheel_scaler {
-	    compatible = "zmk,input-behavior-scaler";
-	    #binding-cells = <2>;
-	    evt-type = <INPUT_EV_REL>;
-	    input-code = <INPUT_REL_WHEEL>;
-    };
 
     normal_mmv {
 	    compatible = "zmk,input-behavior-listener";
@@ -93,33 +87,6 @@
 	    scale-divisor = <8>;
     };
 
-    normal_msc {
-	    compatible = "zmk,input-behavior-listener";
-	    device = <&msc>;
-	    layers = <6>;
-	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_MISC>;
-	    bindings = <&ib_wheel_scaler 1 8>;
-    };
-
-    fast_msc {
-	    compatible = "zmk,input-behavior-listener";
-	    device = <&msc>;
-	    layers = <8>;
-	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_MISC>;
-	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 2>;
-    };
-    fine_msc {
-	    compatible = "zmk,input-behavior-listener";
-	    device = <&msc>;
-	    layers = <7>;
-	    evt-type = <INPUT_EV_REL>;
-	    x-input-code = <INPUT_REL_MISC>;
-	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 16>;
-    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -218,25 +185,25 @@
 
         mouseslow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans                &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MIN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MIN  &trans            &trans               &trans                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans                &trans
+                                                      &trans  &trans                  &trans  &trans
             >;
         };
 
         mousefast {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans                &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MAX  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MAX  &trans            &trans               &trans                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans                &trans
+                                                      &trans  &trans                  &trans  &trans
             >;
         };
     };
