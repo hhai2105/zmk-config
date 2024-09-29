@@ -86,6 +86,12 @@
 	    scale-divisor = <4>;
     };
 
+    ib_wheel_scaler: ib_wheel_scaler {
+	    compatible = "zmk,input-behavior-scaler";
+	    evt-type = <INPUT_EV_REL>;
+	    input-code = <INPUT_REL_WHEEL>;
+    };
+
     normal_msc {
 	    compatible = "zmk,input-behavior-listener";
 	    device = <&msc>;
