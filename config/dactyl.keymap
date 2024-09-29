@@ -93,7 +93,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 4>
+	    bindings = <&ib_wheel_scaler 1 4>;
     };
 
     fast_msc {
@@ -103,7 +103,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 1>
+	    bindings = <&ib_wheel_scaler 1 1>;
     };
     fine_msc {
 	    compatible = "zmk,input-behavior-listener";
@@ -112,7 +112,7 @@
 	    evt-type = <INPUT_EV_REL>;
 	    x-input-code = <INPUT_REL_MISC>;
 	    y-input-code = <INPUT_REL_WHEEL>;
-	    bindings = <&ib_wheel_scaler 1 8>
+	    bindings = <&ib_wheel_scaler 1 8>;
     };
     keymap {
         compatible = "zmk,keymap";
