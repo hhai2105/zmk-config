@@ -178,9 +178,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans                &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MED  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_UP_MED  &trans
 &mo 8   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans                &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MED  &trans            &trans               &trans                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN_MED  &trans            &trans               &trans                &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans                &trans
                                                       &trans  &trans                  &trans  &trans
             >;
@@ -190,9 +190,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans                &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MIN  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_UP_MIN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MIN  &trans            &trans               &trans                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN_MIN  &trans            &trans               &trans                &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans                &trans
                                                       &trans  &trans                  &trans  &trans
             >;
@@ -202,9 +202,9 @@
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans              &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &trans                &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_DOWN_MAX  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans              &trans            &trans               &msc SCROLL_UP_MAX  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_UP_MAX  &trans            &trans               &trans                &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN_MAX  &trans            &trans               &trans                &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans              &trans            &trans               &trans                &trans
                                                       &trans  &trans                  &trans  &trans
             >;
