@@ -117,7 +117,7 @@
 &trans     &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &trans     &trans     &trans            &trans             &kp MINUS
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &trans                          &trans  &kp N6         &kp N7     &kp N8     &kp N9            &kp N0             &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &kp EQUAL  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&trans     &trans  &trans  &trans  &trans  &trans                                                         &trans     &kp LEFT   &kp DOWN          &kp UP             &kp RIGHT  &trans
+&trans     &trans  &trans  &trans  &trans  &trans                                                         &kp LEFT   &kp DOWN   &kp UP            &kp RIGHT          &trans     &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &kp BACKSPACE  &trans     &trans     &trans            &trans             &trans
                                                    &trans  &trans                  &trans  &trans
             >;
