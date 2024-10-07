@@ -57,7 +57,7 @@
     normal_mmv {
         compatible = "zmk,input-behavior-listener";
         device = <&mmv>;
-        layers = <6>;
+        layers = <5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -68,7 +68,7 @@
     fast_mmv {
         compatible = "zmk,input-behavior-listener";
         device = <&mmv>;
-        layers = <8>;
+        layers = <7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -79,7 +79,7 @@
     fine_mmv {
         compatible = "zmk,input-behavior-listener";
         device = <&mmv>;
-        layers = <7>;
+        layers = <6>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -164,7 +164,7 @@
 &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans                &trans            &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans                &trans            &trans               &trans              &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                          &trans  &trans              &trans                &trans            &trans               &msc SCROLL_UP_MED  &trans
-&mo 6   &mo 7   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED    &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans              &trans
+&mo 7   &mo 6   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED    &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans              &trans
 &trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN_MED  &trans            &trans               &trans              &trans  &trans
 &trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans                &trans            &trans               &trans              &trans
                                                       &trans  &trans                  &trans  &trans
