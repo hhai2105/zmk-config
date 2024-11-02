@@ -188,13 +188,13 @@
 
         game_layer {
             bindings = <
-&trans  &trans          &trans         &trans        &trans  &trans  &trans          &to 0  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE       &kp N1         &kp N2        &kp N3  &kp N4  &kp N5                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp ESCAPE      &kp Q          &kp W         &kp E   &kp R   &kp T                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &kp A          &kp S         &kp D   &kp F   &kp G                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LCTRL       &kp LEFT_META  &kp LEFT_ALT  &trans  &trans                                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans          &trans         &trans        &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                                     &trans  &trans                 &trans  &trans
+&trans  &trans          &trans     &trans        &trans  &trans  &trans          &to 0  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp GRAVE       &kp N1     &kp N2        &kp N3  &kp N4  &kp N5                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ESCAPE      &kp Q      &kp W         &kp E   &kp R   &kp T                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &kp A      &kp S         &kp D   &kp F   &kp G                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL       &kp Z      &kp X         &kp C   &kp V                                                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &kp LMETA  &kp LEFT_ALT  &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                                 &trans  &trans                 &trans  &trans
             >;
         };
     };
