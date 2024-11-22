@@ -130,7 +130,7 @@
             bindings = <
 &trans  &trans      &trans     &trans     &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans      &trans     &trans     &trans        &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans    &trans
-&trans  &trans      &trans     &trans     &trans        &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans      &trans     &trans     &trans        &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &kp P     &trans
 &trans  &kp LSHIFT  &kp LCTRL  &kp LMETA  &kp LEFT_ALT  &trans  &trans                          &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
 &trans  &trans      &trans     &trans     &trans        &trans                                                  &trans  &trans  &trans  &trans    &trans  &trans
 &trans  &trans      &trans     &trans     &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans
