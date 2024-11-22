@@ -116,12 +116,12 @@
 
         rightmod {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans    &trans     &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans    &trans     &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RALT  &kp RMETA  &kp RCTRL  &kp RSHIFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans     &trans     &trans      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans         &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &trans    &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans         &trans    &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &kp BACKSPACE  &kp RALT  &kp RMETA  &kp RCTRL  &kp RSHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                         &trans    &trans     &trans     &trans      &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans         &trans    &trans     &trans     &trans      &trans
                                                 &trans  &trans                  &trans  &trans
             >;
         };
