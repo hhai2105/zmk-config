@@ -119,7 +119,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans    &trans     &trans     &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans    &trans     &trans     &kp BACKSPACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RALT  &kp RMETA  &kp RCTRL  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RALT  &kp RMETA  &kp RCTRL  &kp RSHIFT     &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &trans     &trans     &trans         &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans     &trans     &trans         &trans
                                                 &trans  &trans                  &trans  &trans
