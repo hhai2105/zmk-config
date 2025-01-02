@@ -1,7 +1,7 @@
 if SHIELD_DACTYL_LEFT
 
     config ZMK_KEYBOARD_NAME
-        default "DM-BF(Left)"
+        default "Dactyl Mini"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
