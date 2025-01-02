@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define U_MOUSE_MOVE_MED 600
 #define U_MOUSE_MOVE_MAX 1000
@@ -111,10 +114,10 @@
 
         rightmod {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans  &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans  &kp RALT  &kp RMETA  &kp RCTRL  &kp RSHIFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE  &trans  &trans    &trans     &trans     &trans      &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans  &trans    &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans         &trans  &trans    &kp DELETE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans  &kp RALT  &kp RMETA   &kp RCTRL  &kp RSHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE  &trans  &trans    &trans      &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans  &trans    &trans      &trans     &trans      &trans
 &trans  &trans  &trans  &trans
             >;
         };
