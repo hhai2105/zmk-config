@@ -94,101 +94,101 @@
 
         default_layer {
             bindings = <
-&kp TAB     &kp Q     &kp W         &kp E  &kp R  &kp T      &kp PG_UP                 &kp EQUAL  &kp Y  &kp U      &kp I            &kp O  &kp P  &kp BSLH
-&kp ESCAPE  &kp A     &kp S         &kp D  &kp F  &kp G      &kp PG_DN                                   &kp MINUS  &kp H            &kp J  &kp K  &kp L                   &kp SEMI   &kp SQT
-&kp LSHFT   &kp Z     &kp X         &kp C  &kp V  &kp B                                                                              &kp N  &kp M  &kp COMMA      &kp DOT             &kp FSLH   &kp RIGHT_SHIFT
-&kp LCTRL   &kp LCMD  &kp LEFT_ALT  &mo 4  &mo 1  &kp SPACE  &mo 3         &mo 5                  &mo 5  &mo 2      &kp ENTER        &mo 1  &mo 4  &kp RIGHT_ALT           &kp RMETA  &kp RCTRL
-                                                             &kp CAPSLOCK  &kp LSHIFT                    &kp RGUI   &kp RIGHT_SHIFT
+&kp TAB     &kp Q     &kp W         &kp E  &kp R  &kp T  &kp PG_UP                                                         &kp EQUAL  &kp Y  &kp U  &kp I      &kp O          &kp P      &kp BSLH
+&kp ESCAPE  &kp A     &kp S         &kp D  &kp F  &kp G  &kp PG_DN                                                         &kp MINUS  &kp H  &kp J  &kp K      &kp L          &kp SEMI   &kp SQT
+&kp LSHFT   &kp Z     &kp X         &kp C  &kp V  &kp B                                                                               &kp N  &kp M  &kp COMMA  &kp DOT        &kp FSLH   &kp RIGHT_SHIFT
+&kp LCTRL   &kp LCMD  &kp LEFT_ALT  &mo 4         &mo 1  &kp SPACE  &mo 3         &mo 5         &mo 5     &mo 2            &kp ENTER  &mo 1         &mo 4      &kp RIGHT_ALT  &kp RMETA  &kp RCTRL
+                                                                    &kp CAPSLOCK  &kp LSHIFT    &kp RGUI  &kp RIGHT_SHIFT
             >;
         };
 
         modmove {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp C_VOLUME_UP            &trans  &kp N6  &kp N7  &kp N8    &kp N9    &kp N0     &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN                          &trans  &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT                    &trans  &trans
-&trans     &trans  &trans  &trans  &trans  &trans                                                               &trans    &kp EQUAL  &kp MINUS  &kp LEFT_BRACKET          &kp RIGHT_BRACKET  &trans
-&trans     &trans  &trans  &trans  &trans  &trans  &trans             &trans          &trans  &trans  &trans    &trans    &trans     &trans                       &trans  &trans
-                                                   &trans             &trans                  &trans  &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp C_VOLUME_UP                                      &trans  &kp N6    &kp N7     &kp N8     &kp N9            &kp N0             &trans
+&trans     &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN                                    &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT         &trans             &trans
+&trans     &trans  &trans  &trans  &trans  &trans                                                               &trans    &kp EQUAL  &kp MINUS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&trans     &trans  &trans  &trans          &trans  &trans             &trans  &trans    &trans  &trans  &trans  &trans               &trans     &trans            &trans             &trans
+                                                                      &trans  &trans    &trans  &trans
             >;
         };
 
         rightmod {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans    &kp DELETE     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RALT  &kp RMETA      &kp RCTRL          &kp RSHIFT  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &kp BACKSPACE  &trans     &trans              &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans         &trans             &trans      &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans         &trans     &trans     &kp DELETE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &kp RALT       &kp RMETA  &kp RCTRL  &kp RSHIFT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &trans  &kp BACKSPACE  &trans     &trans     &trans      &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans                 &trans     &trans     &trans      &trans
+                                                        &trans  &trans    &trans  &trans
             >;
         };
 
         leftmod {
             bindings = <
-&trans  &trans      &trans     &trans     &trans        &trans  &trans          &trans  &trans  &trans  &trans  &trans  &kp P   &trans
-&trans  &kp LSHIFT  &kp LCTRL  &kp LMETA  &kp LEFT_ALT  &trans  &trans                          &trans  &trans  &kp J   &kp K   &kp L           &kp SEMI  &trans
-&trans  &trans      &trans     &trans     &trans        &trans                                                  &trans  &trans  &trans  &trans            &trans  &trans
-&trans  &trans      &trans     &trans     &trans        &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans    &trans
-                                                                &trans  &trans                  &trans  &trans
+&trans  &trans      &trans     &trans     &trans        &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &kp P     &trans
+&trans  &kp LSHIFT  &kp LCTRL  &kp LMETA  &kp LEFT_ALT  &trans  &trans                                    &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&trans  &trans      &trans     &trans     &trans        &trans                                                    &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans      &trans     &trans                   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans
+                                                                        &trans  &trans    &trans  &trans
             >;
         };
 
         bt {
             bindings = <
-&trans  &sys_reset  &trans  &trans  &trans  &trans       &trans          &trans  &trans  &trans  &trans  &trans       &sys_reset  &trans
-&trans  &trans      &trans  &trans  &trans  &trans       &trans                          &trans  &trans  &trans       &trans      &trans          &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &bootloader                                                  &bootloader  &trans      &trans  &trans          &trans  &trans
-&trans  &trans      &trans  &trans  &trans  &trans       &trans  &trans          &trans  &trans  &trans  &trans       &trans      &trans          &trans  &trans
-                                                         &trans  &trans                  &trans  &trans
+&trans  &sys_reset  &trans  &trans  &trans  &trans       &trans                                    &trans  &trans       &trans  &trans  &trans  &sys_reset  &trans
+&trans  &trans      &trans  &trans  &trans  &trans       &trans                                    &trans  &trans       &trans  &trans  &trans  &trans      &trans
+&trans  &trans      &trans  &trans  &trans  &bootloader                                                    &bootloader  &trans  &trans  &trans  &trans      &trans
+&trans  &trans      &trans  &trans          &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans               &trans  &trans  &trans      &trans
+                                                                 &trans  &trans    &trans  &trans
             >;
         };
 
         mousedefault {
             bindings = <
-&trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans  &trans  &trans  &trans              &trans                &msc SCROLL_UP_MED  &trans
-&mo 7   &mo 6   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                          &trans  &mmv MOVE_LEFT_MED  &mmv MOVE_DOWN_MED    &mmv MOVE_UP_MED    &mmv MOVE_RIGHT_MED          &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans                                                              &msc SCROLL_DOWN_MED  &trans              &trans               &trans          &trans  &trans
-&trans  &trans  &trans    &trans    &trans    &trans  &trans  &trans          &trans  &trans  &trans              &trans                &trans              &trans                       &trans  &trans
-                                                      &trans  &trans                  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans  &trans                                    &trans  &trans                &trans              &trans            &trans               &msc SCROLL_UP_MED  &trans
+&mo 7   &mo 6   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                                    &trans  &mmv MOVE_LEFT_MED    &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans              &trans
+&trans  &trans  &trans    &trans    &trans    &trans                                                    &msc SCROLL_DOWN_MED  &trans              &trans            &trans               &trans              &trans
+&trans  &trans  &trans    &trans              &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans                                    &trans            &trans               &trans              &trans
+                                                              &trans  &trans    &trans  &trans
             >;
         };
 
         mouseslow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans                &msc SCROLL_UP_MIN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                &trans              &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &msc SCROLL_DOWN_MIN  &trans              &trans  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans                &trans              &trans          &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &msc SCROLL_UP_MIN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &msc SCROLL_DOWN_MIN  &trans  &trans  &trans  &trans              &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans                        &trans  &trans  &trans              &trans
+                                                        &trans  &trans    &trans  &trans
             >;
         };
 
         mousefast {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans                &msc SCROLL_UP_MAX  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans                &trans              &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &msc SCROLL_DOWN_MAX  &trans              &trans  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans                &trans              &trans          &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &msc SCROLL_UP_MAX  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                                    &msc SCROLL_DOWN_MAX  &trans  &trans  &trans  &trans              &trans
+&trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans                        &trans  &trans  &trans              &trans
+                                                        &trans  &trans    &trans  &trans
             >;
         };
 
         game_layer {
             bindings = <
-&trans  &kp ESCAPE      &kp Q      &kp W         &kp E   &kp R   &kp T           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT_SHIFT  &kp A      &kp S         &kp D   &kp F   &kp G                           &trans  &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &kp LCTRL       &kp Z      &kp X         &kp C   &kp V                                                   &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans          &kp LMETA  &kp LEFT_ALT  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
-                                                                 &trans  &trans                  &trans  &trans
+&trans  &kp ESCAPE      &kp Q      &kp W         &kp E  &kp R   &kp T                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &kp A      &kp S         &kp D  &kp F   &kp G                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LCTRL       &kp Z      &kp X         &kp C  &kp V                                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &kp LMETA  &kp LEFT_ALT         &tog 9  &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans
+                                                                        &trans  &to 0     &trans  &trans
             >;
         };
 
-        layer_9 {
+        game_layer_nums {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans
-                                                &trans  &trans                  &trans  &trans
+&trans  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans        &trans        &trans        &trans                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans        &trans        &trans                                                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans                      &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans
+                                                                                   &trans  &trans    &trans  &trans
             >;
         };
     };
