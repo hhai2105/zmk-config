@@ -26,6 +26,11 @@
 #define GAME       8
 #define GAME_NUM   9
 
+// A layer that passes every key through to the one below. MouseSlow and
+// MouseFast only exist to switch the mouse speed overrides below.
+#define T7 &trans &trans &trans &trans &trans &trans &trans
+#define TRANSPARENT_LAYER T7 T7 T7 T7 T7 T7 T7 T7 &trans &trans &trans &trans &trans &trans
+
 &mmv {
     acceleration-exponent = <1>;
     time-to-max-speed-ms = <0>;
@@ -143,24 +148,12 @@
 
         mouseslow {
             display-name = "MouseSlow";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                        &trans  &trans      &trans  &trans
-            >;
+            bindings = <TRANSPARENT_LAYER>;
         };
 
         mousefast {
             display-name = "MouseFast";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                                        &trans  &trans      &trans  &trans
-            >;
+            bindings = <TRANSPARENT_LAYER>;
         };
 
         game_layer {
