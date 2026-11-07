@@ -58,8 +58,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)  RC(3,4) RC(3,5) RC(3,7) RC(3,8)	        RC(3,17
 
         // Positions are in centi-keyunits (100 = 1u), in the same order as
         // default_transform's map. Matrix row 3 mixes the 4 bottom finger
-        // keys with thumb keys, so its cols 4-5 and 7-8 are drawn in the
-        // thumb cluster (three pairs per half) along with row 4.
+        // keys with thumb keys: cols 4-5 are drawn as a thumb pair under the
+        // finger row, and cols 7-8 with row 4 as a tilted 2x2 block.
         keys
             // row 0
             = <&key_physical_attrs 100 100     0    35       0     0     0>
@@ -114,24 +114,24 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)  RC(3,4) RC(3,5) RC(3,7) RC(3,8)	        RC(3,17
             , <&key_physical_attrs 100 100   100   335       0     0     0>
             , <&key_physical_attrs 100 100   200   310       0     0     0>
             , <&key_physical_attrs 100 100   300   300       0     0     0>
-            , <&key_physical_attrs 100 100   400   330    1500   500   400>
-            , <&key_physical_attrs 100 100   500   330    1500   500   400>
-            , <&key_physical_attrs 100 100   450   430    1500   500   400>
-            , <&key_physical_attrs 100 100   550   430    1500   500   400>
-            , <&key_physical_attrs 100 100  1250   430 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1350   430 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1300   330 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1400   330 (-1500)  1400   400>
+            , <&key_physical_attrs 100 100   420   350    1000   420   350>
+            , <&key_physical_attrs 100 100   520   350    1000   420   350>
+            , <&key_physical_attrs 100 100   640   440    2000   620   440>
+            , <&key_physical_attrs 100 100   740   440    2000   620   440>
+            , <&key_physical_attrs 100 100  1060   440 (-2000)  1280   440>
+            , <&key_physical_attrs 100 100  1160   440 (-2000)  1280   440>
+            , <&key_physical_attrs 100 100  1280   350 (-1000)  1480   350>
+            , <&key_physical_attrs 100 100  1380   350 (-1000)  1480   350>
             , <&key_physical_attrs 100 100  1500   300       0     0     0>
             , <&key_physical_attrs 100 100  1600   310       0     0     0>
             , <&key_physical_attrs 100 100  1700   335       0     0     0>
             , <&key_physical_attrs 100 100  1800   335       0     0     0>
 
             // row 4: lower thumb pair
-            , <&key_physical_attrs 100 100   500   530    1500   500   400>
-            , <&key_physical_attrs 100 100   600   530    1500   500   400>
-            , <&key_physical_attrs 100 100  1200   530 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1300   530 (-1500)  1400   400>
+            , <&key_physical_attrs 100 100   640   540    2000   620   440>
+            , <&key_physical_attrs 100 100   740   540    2000   620   440>
+            , <&key_physical_attrs 100 100  1060   540 (-2000)  1280   440>
+            , <&key_physical_attrs 100 100  1160   540 (-2000)  1280   440>
             ;
     };
 
