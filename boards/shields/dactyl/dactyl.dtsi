@@ -42,13 +42,11 @@
         rows = <5>;
 
         map = <
-RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6)     RC(0,15) RC(0,14) RC(0,13) RC(0,12) RC(0,11) RC(0,10) RC(0,9)
-RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6)     RC(1,15) RC(1,14) RC(1,13) RC(1,12) RC(1,11) RC(1,10) RC(1,9)
-RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6)     RC(2,15) RC(2,14) RC(2,13) RC(2,12) RC(2,11) RC(2,10) RC(2,9)
-RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                                        RC(3,12) RC(3,11) RC(3,10) RC(3,9)
-                                RC(3,4) RC(3,5)                      RC(3,14) RC(3,13)
-                                        RC(3,7) RC(3,8)     RC(3,17) RC(3,16)
-                                        RC(4,7) RC(4,8)     RC(4,17) RC(4,16)
+RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5) RC(0,6)					 RC(0,15) RC(0,14) RC(0,13) RC(0,12) RC(0,11)  RC(0,10) RC(0,9)
+RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5) RC(1,6)                   	   	 RC(1,15) RC(1,14) RC(1,13) RC(1,12) RC(1,11)  RC(1,10) RC(1,9)
+RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6)                   	   	 RC(2,15) RC(2,14) RC(2,13) RC(2,12) RC(2,11)  RC(2,10) RC(2,9)
+RC(3,0) RC(3,1) RC(3,2) RC(3,3)  RC(3,4) RC(3,5) RC(3,7) RC(3,8)	        RC(3,17) RC(3,16) RC(3,14) RC(3,13) RC(3,12) RC(3,11) RC(3,10) RC(3,9)
+                                                 RC(4,7) RC(4,8)           	RC(4,17) RC(4,16)
         >;
     };
 
@@ -59,9 +57,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                                 
         kscan = <&kscan0>;
 
         // Positions are in centi-keyunits (100 = 1u), in the same order as
-        // default_transform's map: 3 full finger rows (col 6 is the extra
-        // key next to T/G/B), a 4-key bottom finger row, and a 6-key thumb
-        // cluster per half as three pairs.
+        // default_transform's map. Matrix row 3 mixes the 4 bottom finger
+        // keys with thumb keys, so its cols 4-5 and 7-8 are drawn in the
+        // thumb cluster (three pairs per half) along with row 4.
         keys
             // row 0
             = <&key_physical_attrs 100 100     0    35       0     0     0>
@@ -111,29 +109,25 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)                                                 
             , <&key_physical_attrs 100 100  1700   235       0     0     0>
             , <&key_physical_attrs 100 100  1800   235       0     0     0>
 
-            // row 3 (fingers)
+            // row 3: 4 finger keys per half, the rest drawn in the thumb cluster
             , <&key_physical_attrs 100 100     0   335       0     0     0>
             , <&key_physical_attrs 100 100   100   335       0     0     0>
             , <&key_physical_attrs 100 100   200   310       0     0     0>
             , <&key_physical_attrs 100 100   300   300       0     0     0>
+            , <&key_physical_attrs 100 100   400   330    1500   500   400>
+            , <&key_physical_attrs 100 100   500   330    1500   500   400>
+            , <&key_physical_attrs 100 100   450   430    1500   500   400>
+            , <&key_physical_attrs 100 100   550   430    1500   500   400>
+            , <&key_physical_attrs 100 100  1250   430 (-1500)  1400   400>
+            , <&key_physical_attrs 100 100  1350   430 (-1500)  1400   400>
+            , <&key_physical_attrs 100 100  1300   330 (-1500)  1400   400>
+            , <&key_physical_attrs 100 100  1400   330 (-1500)  1400   400>
             , <&key_physical_attrs 100 100  1500   300       0     0     0>
             , <&key_physical_attrs 100 100  1600   310       0     0     0>
             , <&key_physical_attrs 100 100  1700   335       0     0     0>
             , <&key_physical_attrs 100 100  1800   335       0     0     0>
 
-            // thumb cluster: upper pair
-            , <&key_physical_attrs 100 100   400   330    1500   500   400>
-            , <&key_physical_attrs 100 100   500   330    1500   500   400>
-            , <&key_physical_attrs 100 100  1300   330 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1400   330 (-1500)  1400   400>
-
-            // thumb cluster: middle pair
-            , <&key_physical_attrs 100 100   450   430    1500   500   400>
-            , <&key_physical_attrs 100 100   550   430    1500   500   400>
-            , <&key_physical_attrs 100 100  1250   430 (-1500)  1400   400>
-            , <&key_physical_attrs 100 100  1350   430 (-1500)  1400   400>
-
-            // thumb cluster: lower pair
+            // row 4: lower thumb pair
             , <&key_physical_attrs 100 100   500   530    1500   500   400>
             , <&key_physical_attrs 100 100   600   530    1500   500   400>
             , <&key_physical_attrs 100 100  1200   530 (-1500)  1400   400>
