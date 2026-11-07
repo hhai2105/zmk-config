@@ -77,6 +77,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Base";
             bindings = <
 &kp TAB     &kp Q     &kp W         &kp E  &kp R  &kp T  &kp PG_UP                                                         &kp EQUAL  &kp Y  &kp U  &kp I      &kp O          &kp P      &kp BSLH
 &kp ESCAPE  &kp A     &kp S         &kp D  &kp F  &kp G  &kp PG_DN                                                         &kp MINUS  &kp H  &kp J  &kp K      &kp L          &kp SEMI   &kp SQT
@@ -87,6 +88,7 @@
         };
 
         modmove {
+            display-name = "NumNav";
             bindings = <
 &kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp C_VOLUME_UP                                      &trans  &kp N6    &kp N7     &kp N8     &kp N9            &kp N0             &trans
 &trans     &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN                                    &trans  &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT         &trans             &trans
@@ -97,6 +99,7 @@
         };
 
         rightmod {
+            display-name = "RightMod";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &trans         &trans     &trans     &kp DELETE  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans  &kp RALT       &kp RMETA  &kp RCTRL  &kp RSHIFT  &trans
@@ -107,6 +110,7 @@
         };
 
         leftmod {
+            display-name = "LeftMod";
             bindings = <
 &trans  &trans      &trans     &trans     &trans        &trans  &trans                                    &trans  &trans  &trans  &trans  &trans  &kp P     &trans
 &trans  &kp LSHIFT  &kp LCTRL  &kp LMETA  &kp LEFT_ALT  &trans  &trans                                    &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
@@ -117,8 +121,9 @@
         };
 
         bt {
+            display-name = "System";
             bindings = <
-&to 8       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans       &trans                                    &trans  &trans       &trans  &trans  &trans  &sys_reset  &trans
+&to 8       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans       &trans                                    &trans  &trans       &trans  &trans  &trans  &sys_reset  &studio_unlock
 &bt BT_CLR  &trans        &trans        &trans        &trans        &trans       &trans                                    &trans  &trans       &trans  &trans  &trans  &trans      &trans
 &trans      &trans        &trans        &trans        &trans        &bootloader  &trans                                                    &trans  &bootloader  &trans  &trans  &trans  &trans      &trans
 &trans      &trans        &trans        &trans                      &trans       &trans  &trans  &trans    &trans  &trans  &trans  &trans               &trans  &trans  &trans      &trans
@@ -127,6 +132,7 @@
         };
 
         mousedefault {
+            display-name = "Mouse";
             bindings = <
 &trans  &trans  &trans    &trans    &trans    &trans  &trans                                    &trans  &trans                &trans              &trans            &trans               &msc SCROLL_UP_MED  &trans
 &mo 7   &mo 6   &mkp MB1  &mkp MB3  &mkp MB2  &trans  &trans                                    &trans  &mmv MOVE_LEFT_MED    &mmv MOVE_DOWN_MED  &mmv MOVE_UP_MED  &mmv MOVE_RIGHT_MED  &trans              &trans
@@ -137,6 +143,7 @@
         };
 
         mouseslow {
+            display-name = "MouseSlow";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &msc SCROLL_UP_MIN  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &trans              &trans
@@ -147,6 +154,7 @@
         };
 
         mousefast {
+            display-name = "MouseFast";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &msc SCROLL_UP_MAX  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                    &trans  &trans                &trans  &trans  &trans  &trans              &trans
@@ -157,6 +165,7 @@
         };
 
         game_layer {
+            display-name = "Game";
             bindings = <
 &trans  &kp ESCAPE      &kp Q      &kp W         &kp E  &kp R   &kp T                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LEFT_SHIFT  &kp A      &kp S         &kp D  &kp F   &kp G                                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -167,6 +176,7 @@
         };
 
         game_layer_nums {
+            display-name = "GameNum";
             bindings = <
 &trans  &kp GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans        &trans        &trans        &trans        &trans                                    &trans  &trans  &trans  &trans  &trans  &trans  &trans

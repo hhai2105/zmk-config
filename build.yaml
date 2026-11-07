@@ -18,7 +18,10 @@
 #
 ---
 include:
+  # ZMK Studio only runs on the central (left) half.
   - board: nice_nano//zmk
     shield: dactyl_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano//zmk
     shield: dactyl_right

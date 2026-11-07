@@ -58,11 +58,17 @@ if [ -n "${KEYMAP:-}" ]; then
 fi
 
 for side in "$@"; do
+    # Studio only runs on the central half; mirror build.yaml's left entry.
+    studio_snippet= studio_args=
+    if [ "$side" = left ]; then
+        studio_snippet="-S studio-rpc-usb-uart"
+        studio_args="-DCONFIG_ZMK_STUDIO=y"
+    fi
     echo "==> building dactyl_$side$suffix"
-    run "west build -p $pristine -s zmk/app -d build/$side$suffix -b $BOARD $snippet -- \
+    run "west build -p $pristine -s zmk/app -d build/$side$suffix -b $BOARD $snippet $studio_snippet -- \
         -DSHIELD=dactyl_$side \
         -DZMK_CONFIG=/repo/config \
-        -DZMK_EXTRA_MODULES=/repo $keymap"
+        -DZMK_EXTRA_MODULES=/repo $keymap $studio_args"
     cp "$WS/build/$side$suffix/zephyr/zmk.uf2" "firmware/dactyl_$side-nice_nano-zmk$suffix.uf2"
 done
 
