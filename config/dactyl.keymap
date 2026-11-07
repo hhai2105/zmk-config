@@ -111,10 +111,10 @@
         leftmod {
             display-name = "LeftMod";
             bindings = <
-&trans  &trans     &trans     &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans    &trans    &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &kp P     &trans
+&trans  &kp LSHFT  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans                                      &trans  &trans  &kp J   &kp K   &kp L   &kp SEMI  &trans
+&trans  &trans     &trans     &trans    &trans    &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans    &trans
+&trans  &trans     &trans     &trans    &trans    &trans          &trans  &trans      &trans  &trans          &trans  &trans  &trans  &trans  &trans    &trans
                                                                   &trans  &trans      &trans  &trans
             >;
         };
