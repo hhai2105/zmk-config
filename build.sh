@@ -4,6 +4,8 @@
 #   ./build.sh              build both halves
 #   ./build.sh left         build one half
 #   CLEAN=1 ./build.sh      full rebuild from scratch
+#   LOG=1 ./build.sh left   debug build that logs over USB serial
+#   KEYMAP=path/to/other.keymap ./build.sh left   use another keymap
 #
 # The ZMK/Zephyr checkout lives in .zmk/ (kept out of the repo root so it
 # doesn't collide with zephyr/module.yml). Output goes to firmware/.
@@ -13,7 +15,7 @@ cd "$(dirname "$0")"
 REPO=$PWD
 WS=.zmk
 IMAGE=zmkfirmware/zmk-build-arm:stable
-BOARD=nice_nano_v2
+BOARD=nice_nano//zmk
 
 [ $# -eq 0 ] && set -- left right
 
@@ -43,13 +45,25 @@ fi
 pristine=auto
 [ "${CLEAN:-0}" = 1 ] && pristine=always
 
+snippet= suffix=
+if [ "${LOG:-0}" = 1 ]; then
+    snippet="-S zmk-usb-logging"
+    suffix=-log
+fi
+
+keymap=
+if [ -n "${KEYMAP:-}" ]; then
+    keymap="-DKEYMAP_FILE=/repo/$KEYMAP"
+    suffix="$suffix-$(basename "$KEYMAP" .keymap)"
+fi
+
 for side in "$@"; do
-    echo "==> building dactyl_$side"
-    run "west build -p $pristine -s zmk/app -d build/$side -b $BOARD -- \
+    echo "==> building dactyl_$side$suffix"
+    run "west build -p $pristine -s zmk/app -d build/$side$suffix -b $BOARD $snippet -- \
         -DSHIELD=dactyl_$side \
         -DZMK_CONFIG=/repo/config \
-        -DZMK_EXTRA_MODULES=/repo"
-    cp "$WS/build/$side/zephyr/zmk.uf2" "firmware/dactyl_$side-$BOARD-zmk.uf2"
+        -DZMK_EXTRA_MODULES=/repo $keymap"
+    cp "$WS/build/$side$suffix/zephyr/zmk.uf2" "firmware/dactyl_$side-nice_nano-zmk$suffix.uf2"
 done
 
 echo "==> done:"

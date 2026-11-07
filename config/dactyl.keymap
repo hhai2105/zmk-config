@@ -5,7 +5,8 @@
  */
 
 #include <behaviors/mouse_keys.dtsi>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -53,40 +54,25 @@
     trigger-period-ms = <8>;      // 16
 };
 
-/ {
-    normal_mmv {
-        compatible = "zmk,input-behavior-listener";
-        device = <&mmv>;
-        layers = <5>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <7>;
-        scale-divisor = <6>;
-    };
-
-    fast_mmv {
-        compatible = "zmk,input-behavior-listener";
-        device = <&mmv>;
+&mmv_input_listener {
+    // First matching layer wins, so the fast/fine layers go before the base mouse layer.
+    fast {
         layers = <7>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <2>;
-        scale-divisor = <1>;
+        input-processors = <&zip_xy_scaler 2 1>;
     };
 
-    fine_mmv {
-        compatible = "zmk,input-behavior-listener";
-        device = <&mmv>;
+    fine {
         layers = <6>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        scale-multiplier = <3>;
-        scale-divisor = <8>;
+        input-processors = <&zip_xy_scaler 3 8>;
     };
 
+    normal {
+        layers = <5>;
+        input-processors = <&zip_xy_scaler 7 6>;
+    };
+};
+
+/ {
     keymap {
         compatible = "zmk,keymap";
 
